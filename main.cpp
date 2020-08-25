@@ -27,7 +27,7 @@ void testPairToNumber(
 //new function added that gives all color
 //code with the pair numbers
 
-void ToString()
+void printAllCodesAndColors()
 {
     for (int pairNumber = 1; pairNumber < 26; pairNumber++) {
         TelCoColorCoder::ColorPair colorPair = TelCoColorCoder::GetColorFromPairNumber(pairNumber);
@@ -38,7 +38,7 @@ void ToString()
 
 int main(){
 
-    ToString();
+    printAllCodesAndColors();
 
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
