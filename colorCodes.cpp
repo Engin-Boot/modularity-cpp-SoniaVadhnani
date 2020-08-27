@@ -32,16 +32,12 @@ void insertColorCodes()
 	TheColorCodes[24] = { "Violet Brown" };
 	TheColorCodes[25] = { "Violet Slate" };
 
-
-
 }
 
 void printColorCodes()
 {
 	for (auto it = TheColorCodes.begin(); it != TheColorCodes.end(); ++it)
 	{
-		
 		cout << it->first << "   " << it->second << endl;
-
 	}
 }
