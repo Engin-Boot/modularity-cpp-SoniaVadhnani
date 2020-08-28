@@ -34,8 +34,8 @@ void testPairToNumber(
 
 int main() {
 
-    colorCodes:: insertColorCodes();
-    colorCodes::printColorCodes();
+    colorCodes::insertColorCodes();
+ //   colorCodes::printColorCodes();
 
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
