@@ -2,6 +2,8 @@
 #include <assert.h>
 #include "telco.h"
 #include "colorCodes.h"
+using namespace std;
+
 
 
 void testNumberToPair(int pairNumber,
@@ -11,12 +13,14 @@ void testNumberToPair(int pairNumber,
 {
 
       TelCoColorCoder::ColorPair colorPair =
-       TelCoColorCoder::GetColorFromPairNumber(pairNumber);
-    std::cout << "Got pair " << colorPair.ToString() << std::endl;
+      TelCoColorCoder::GetColorFromPairNumber(pairNumber);
+    cout << "Got pair " << colorPair.ToString() << endl;
     assert(colorPair.getMajor() == expectedMajor);
     assert(colorPair.getMinor() == expectedMinor);
 
 }
+
+
 
 void testPairToNumber(
 
@@ -27,15 +31,17 @@ void testPairToNumber(
 {
 
     int pairNumber = TelCoColorCoder::GetPairNumberFromColor(major, minor);
-    std::cout << "Got pair number " << pairNumber << std::endl;
+    cout << "Got pair number " << pairNumber << endl;
     assert(pairNumber == expectedPairNumber);
 
 }
 
+
+
+
 int main() {
 
-    colorCodes::insertColorCodes();
- //   colorCodes::printColorCodes();
+    cout<<colorCodes::getColorCodes(TelCoColorCoder::numberOfMajorColors, TelCoColorCoder::numberOfMinorColors);
 
     testNumberToPair(4, TelCoColorCoder::WHITE, TelCoColorCoder::BROWN);
     testNumberToPair(5, TelCoColorCoder::WHITE, TelCoColorCoder::SLATE);
